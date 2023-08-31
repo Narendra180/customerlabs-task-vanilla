@@ -1,0 +1,85 @@
+
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+  height: 70px;
+  width: 100%;
+  background-color: rgb(71, 202, 223);
+  padding: 10px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.header-text {
+  padding-left: 10px;
+  color: white;
+}
+
+.header-text .back-button {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.header-text .back-button .left-chevron {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 2px;
+}
+
+.main-content .save-segment-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background-color: rgb(231, 231, 231);
+}
+
+.sidebar {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  flex-direction: column;
+}
+
+.sidebar.sidebar-visible {
+  display: flex;
+}
+
+
+.sidebar .sidebar-content {
+  height: 100%;
+  width: 500px;
+  max-width: 100%;
+  position: absolute;
+  right: -530px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.sidebar-content.sidebar-content-visible {
+  right: 0;
+}
+
+.sidebar .sidebar-content .content {
+  background-color: white;
+  flex: 1 0 auto;
+}
