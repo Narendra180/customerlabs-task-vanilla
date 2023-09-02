@@ -164,6 +164,7 @@ header {
   border: 0;
   padding: 10px ;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .add-new-schema-link {
