@@ -25,18 +25,57 @@
       </main>
       <!-- This is the sidebar -->
       <div class="sidebar">
-        <div class="sidebar-content">
+        <div class="sidebar-content-container">
           <header class="header">
             <div class="header-text">
               <button class="sidebar-content-header-back-button back-button">
-                <img class="left-chevron" src="/images/chevron-left-solid.svg" alt="back-icon" />
+                <img class="left-chevron" src="./images/chevron-left-solid.svg" alt="back-icon" />
               </button>
               <span>Saving segment</span>
             </div>
           </header>
-          <div class="content">
-
+          <div class="sidebar-content">
+            <form id="save-segment-form">
+              <div class="segment-input-container">
+                <label for="segment-input">Enter the Name of the Segment</label>
+                <input placeholder="Name of the segment" type="text" id="segment-input" />
+                <p>To save your segment, you need to add the schemas to build the query</p>
+              </div>
+              <div class="selected-schemas-dropdowns-container">
+                <div class="schema-type-indicators-container">
+                  <span class="user-traits-indication">
+                    <span class="indication-dot"></span> -User Traits
+                  </span>
+                  <span class="group-traits-indication">
+                    <span class="indication-dot"></span> -Group Traits
+                  </span>
+                </div>
+                <div class="dropdowns-container">
+                  <p>please use below dropdown to select a schema</p>
+                </div>
+              </div>
+              <div class="add-schema-dropdown-container">
+                <select id="schema-selector-dropdown" name="schema">
+                  <option data-index="0" value="">Add Schema to segement</option>
+                  <option data-index="1" data-trait="user" data-label="First Name" value="first_name">First Name</option>
+                  <option data-index="2" data-trait="user" data-label="Last Name" value="last_name">Last Name</option>
+                  <option data-index="3" data-trait="user" data-label="Gender" value="gender">Gender</option>
+                  <option data-index="4" data-trait="user" data-label="Age" value="age">Age</option>
+                  <option data-index="5" data-trait="group" data-label="Account Name" value="account_name">Account Name</option>
+                  <option data-index="6" data-trait="user" data-label="City" value="city">City</option>
+                  <option data-index="7" data-trait="user" data-label="State" value="state">State</option>
+                </select>
+                <div class="add-schema-link-container">
+                  <span class="plus-icon">+</span>
+                  <a class="add-new-schema-link" href="#">Add new schema</a>
+                </div>
+              </div>
+            </form>
           </div>
+          <footer>
+            <button class="save-btn" type="submit" form="save-segment-form">Save the segment</button>
+            <button class="cancel-btn">Cancel</button>
+          </footer>
         </div>
       </div>
     </div>
