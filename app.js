@@ -59,9 +59,10 @@ saveSegmentForm.addEventListener('submit', (e) => {
   const schemaArray = [];
   Array.from(selectedSchemasDropdownscontainer.children).forEach(node => {
     const selectElement = node.children[1];
-    schemaArray.push({
-      [selectElement.name]: selectElement.value
-    });
+    if(selectElement)
+      schemaArray.push({
+        [selectElement.name]: selectElement.value
+      });
   })
 
   const segment = {
@@ -121,6 +122,8 @@ function addSchemaDropdown(selectedSchema) {
   newDivEle.appendChild(indicationSpanEle);
   newDivEle.appendChild(newSelectEle);
   newDivEle.appendChild(deleteButton);
+
+  newDivEle.classList.add("individual-dropdown-container");
 
   if(document.querySelector(".dropdowns-container p")) {
     selectedSchemasDropdownscontainer.removeChild(document.querySelector(".dropdowns-container p"))

@@ -121,11 +121,29 @@ header {
   flex: 1 1 auto;
 }
 
+.individual-dropdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.individual-dropdown-container span, .individual-dropdown-container button {
+  flex: 0 0 auto;
+}
+
+.individual-dropdown-container select {
+  margin-bottom: 0;
+  flex: 1 1 auto;
+}
+
 .schema-type-indicators-container {
   text-align: right;
   font-size: 1rem;
   margin-bottom: 12px;
   position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 .selected-schemas-dropdowns-container .dropdowns-container p {
